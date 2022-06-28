@@ -47,25 +47,27 @@ def check_balance(list):
 
 
 if __name__ == '__main__':
+
 # Проверка работы стека
     st = Stack()
+    print(f'стек пустой, поэтому возвращается {st.isEmpty_()}')
     st.push(1)
     st.push(3)
     st.push(5)
     st.push(7)
-    print(st.isEmpty_())
-    print(st.stack_list)
-    print(st.pop())
-    print(st.stack_list)
-    print(st.peek())
-    print(st.stack_list)
-    print(st.size())
+    print(f'В стек записаны несколько значений, поэтому возвращается {st.isEmpty_()}')
+    print(f'Содержимое стека сейчас такое: {st.stack_list}')
+    print(f'Из стека удалено последнее значение: {st.pop()}')
+    print(f'Содержимое стека сейчас такое: {st.stack_list}')
+    print(f'Теперь последнее значение стека: {st.peek()}')
+    print(f'Содержимое стека сейчас такое: {st.stack_list}')
+    print(f'Размер стека сейчас равен: {st.size()}')
 
 # Проверка работы функции
     list_for_check = "[([])((([[[]]])))]{()}"
     print(check_balance(list_for_check))
 
-    list_for_check_2 = "{[([])((([[[]]])))]{()}}"
+    list_for_check_2 = "{[([proof])((([text[[]]])))]{()}}"
     print(check_balance(list_for_check_2))
     #
     list_for_check_3 = "[{{{{{{{{{[(])]}}"
